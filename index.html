@@ -77,6 +77,23 @@
 		</div>
 
 	</div>
+	<script>
+		// show images
+		function showImg() {
+			document.querySelector('#left').addEventListener('click', function (e) {
+				// mouseover
+				console.log(e.target.src);
+				let val = e.target.src;
+				document.querySelector('#right').style.padding = "10px;";
+
+				document.querySelector('.active').style.display = "none";
+
+				document.querySelector('#right').style.backgroundImage = `url(${val})`;
+			})
+		}
+		showImg();
+
+	</script>
 
 	<script src="./index.js"></script>
 
